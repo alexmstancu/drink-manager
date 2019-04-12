@@ -1,0 +1,40 @@
+version: '3.3'
+
+networks:
+  back-tier:
+  front-tier:
+
+services:
+  database:
+    container_name: drink-manager-db
+    image: alexstancu96/drink-manager-db:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    networks:
+      - back-tier
+
+  backend-app:
+    container_name: drink-manager-rest
+    image: alexstancu96/drink-manager-rest:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    networks:
+      - back-tier
+      - front-tier
+
+    # frontend-app:
+  #  container_name: some-nginx
+  #  image: nginx:1.13
+  #  restart: always
+  #  ports:
+  #  - 80:80
+  #  - 443:443
+  #  volumes:
+  #  - ./nginx/conf.d:/etc/nginx/conf.d
+  #  depends_on:
+  #  - app
+
