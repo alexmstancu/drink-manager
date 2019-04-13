@@ -1,0 +1,216 @@
+{
+  "name": "Drink Manager",
+  "errorMessageDataPath": "error",
+  "baseUrl":"http://localhost:8080",
+  "pages": [
+    {
+      "default": true,
+      "name": "Drinks",
+      "id": "drinks",
+      "description": "Simple management application for your drinks",
+      "methods": {
+        "getAll": {
+          "label": "Get Contacts",
+          "url": "/drinks",
+          "dataPath": null,
+          "display": {
+            "type": "table",
+            "fields": [
+              {
+                "name": "id",
+                "type": "text",
+                "label": "Id"
+              },
+              {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+              },
+              {
+                "name": "year",
+                "type": "integer",
+                "label": "Year"
+              },
+              {
+                "name": "country",
+                "type": "text",
+                "label": "Country"
+              },
+              {
+                "name": "color",
+                "type": "text",
+                "label": "Color"
+              },
+              {
+                "name": "sweetness",
+                "type": "text",
+                "label": "Sweetness"
+              },
+              {
+                "name": "color",
+                "type": "text",
+                "label": "Color"
+              },
+              {
+                "name": "alcohol",
+                "type": "integer",
+                "label": "Alcohol"
+              },
+              {
+                "name": "drinkType",
+                "type": "text",
+                "label": "Type"
+              },
+              {
+                "name": "strength",
+                "type": "text",
+                "label": "Strength"
+              },
+              {
+                "name": "flavor",
+                "type": "text",
+                "label": "Flavor"
+              },
+              {
+                "name": "region",
+                "type": "text",
+                "label": "Region"
+              }
+            ],
+            "sortBy": ["id"]
+          }
+        },
+        "getSingle": {
+          "url": "/drinks/:id",
+          "dataPath": null,
+          "queryParams": [],
+          "requestHeaders": {}
+        },
+        "put": {
+          "url": "/drinks/:id",
+          "actualMethod": null,
+          "fields": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+              },
+              {
+                "name": "year",
+                "type": "integer",
+                "label": "Year"
+              },
+              {
+                "name": "country",
+                "type": "text",
+                "label": "Country"
+              },
+              {
+                "name": "color",
+                "type": "text",
+                "label": "Color"
+              },
+              {
+                "name": "sweetness",
+                "type": "text",
+                "label": "Sweetness"
+              },
+              {
+                "name": "color",
+                "type": "text",
+                "label": "Color"
+              },
+              {
+                "name": "alcohol",
+                "type": "integer",
+                "label": "Alcohol"
+              },
+              {
+                "name": "drinkType",
+                "type": "text",
+                "label": "Type"
+              },
+              {
+                "name": "strength",
+                "type": "text",
+                "label": "Strength"
+              },
+              {
+                "name": "flavor",
+                "type": "text",
+                "label": "Flavor"
+              },
+              {
+                "name": "region",
+                "type": "text",
+                "label": "Region"
+              }
+          ]
+        },
+        "post": {
+          "url": "/drinks",
+          "fields": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+              },
+              {
+                "name": "year",
+                "type": "integer",
+                "label": "Year"
+              },
+              {
+                "name": "country",
+                "type": "text",
+                "label": "Country"
+              },
+              {
+                "name": "color",
+                "type": "text",
+                "label": "Color"
+              },
+              {
+                "name": "sweetness",
+                "type": "text",
+                "label": "Sweetness"
+              },
+              {
+                "name": "color",
+                "type": "text",
+                "label": "Color"
+              },
+              {
+                "name": "alcohol",
+                "type": "integer",
+                "label": "Alcohol"
+              },
+              {
+                "name": "drinkType",
+                "type": "text",
+                "label": "Type"
+              },
+              {
+                "name": "strength",
+                "type": "text",
+                "label": "Strength"
+              },
+              {
+                "name": "flavor",
+                "type": "text",
+                "label": "Flavor"
+              },
+              {
+                "name": "region",
+                "type": "text",
+                "label": "Region"
+              }
+          ]
+        },
+        "delete": {
+          "url": "/drinks/:id"
+        }
+      }
+    }
+  ]
+}

@@ -1,9 +1,5 @@
 version: '3.3'
 
-networks:
-  back-tier:
-  front-tier:
-
 services:
   database:
     container_name: drink-manager-db
@@ -26,15 +22,17 @@ services:
       - back-tier
       - front-tier
 
-    # frontend-app:
-  #  container_name: some-nginx
-  #  image: nginx:1.13
-  #  restart: always
-  #  ports:
-  #  - 80:80
-  #  - 443:443
-  #  volumes:
-  #  - ./nginx/conf.d:/etc/nginx/conf.d
-  #  depends_on:
-  #  - app
+  frontend-app:
+    container_name: drink-manager-ui
+    image: alexstancu96/drink-manager-ui:latest
+    restart: always
+    ports:
+      - "4200:4200"
+    depends_on:
+    - backend-app
+    networks:
+      - front-tier
 
+networks:
+  back-tier:
+  front-tier:
