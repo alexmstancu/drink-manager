@@ -9,6 +9,8 @@ services:
       - "3306:3306"
     networks:
       - back-tier
+    volumes:
+      - drink-data:/var/lib/mysql
 
   backend-app:
     container_name: drink-manager-rest
@@ -26,6 +28,9 @@ services:
     container_name: drink-manager-ui
     image: alexstancu96/drink-manager-ui:latest
     restart: always
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
     ports:
       - "4200:4200"
     depends_on:
@@ -36,3 +41,6 @@ services:
 networks:
   back-tier:
   front-tier:
+
+volumes:
+  drink-data:

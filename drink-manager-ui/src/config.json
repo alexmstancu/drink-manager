@@ -1,7 +1,7 @@
 {
   "name": "Drink Manager",
   "errorMessageDataPath": "error",
-  "baseUrl":"http://localhost:8080",
+  "baseUrl":"http://drink-manager-rest:8080",
   "pages": [
     {
       "default": true,
@@ -10,7 +10,7 @@
       "description": "Simple management application for your drinks",
       "methods": {
         "getAll": {
-          "label": "Get Contacts",
+          "label": "Get drinks",
           "url": "/drinks",
           "dataPath": null,
           "display": {
