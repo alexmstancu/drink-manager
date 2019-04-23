@@ -1,6 +1,4 @@
-FROM node:8.10.0
-
-#EXPOSE 4200
+FROM node:9.6.1
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
@@ -11,7 +9,7 @@ COPY package.json /usr/src/app/package.json
 COPY package-lock.json /usr/src/app/package-lock.json
 
 RUN npm install
-RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli@latest
 
 COPY . /usr/src/app
 
